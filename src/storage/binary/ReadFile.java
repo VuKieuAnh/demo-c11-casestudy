@@ -9,12 +9,12 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadFile {
-    public static void main(String[] args) {
-        List<Student> students = readFile("students.dat");
-        System.out.println(students);
-    }
-    public static List<Student> readFile(String fileName) {
+public class ReadFile implements IReadFileStudent {
+//    public static void main(String[] args) {
+//        List<Student> students = readFile("students.dat");
+//        System.out.println(students);
+//    }
+    public List<Student> readStudent(String fileName) {
         List<Student> students = new ArrayList<>();
         File file = new File(fileName);
         ObjectInputStream ois = null;

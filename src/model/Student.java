@@ -41,4 +41,12 @@ public class Student implements Serializable {
     }
 
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

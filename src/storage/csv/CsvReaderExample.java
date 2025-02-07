@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CsvReaderExample {
@@ -39,6 +40,7 @@ public class CsvReaderExample {
 //    viet 1 ham moi: tach chuoi ra, gan lai thuoc tinh cho doi tuong
     private static List<Student> getStudent(List<String> strings){
         List<Student> students = new ArrayList<>();
+        LinkedList<Student> students1 = new LinkedList<>();
         strings.remove(0);
         for (String s : strings) {
             String[] split = s.split(WriteFileCSV.SEPARATOR);
@@ -50,4 +52,5 @@ public class CsvReaderExample {
         }
         return students;
     }
+//    Book thay the cho ProgrammingBook khong nguoc lai dc -> khong  nen
 }
